@@ -1,0 +1,15 @@
+﻿@model List<googlesearch.Models.SingleResult>
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h2>Results</h2>
+<div>
+    @foreach (var item in Model)
+    {
+        <div class="item" style="margin: 20px">
+            <h4>@item.Title</h4>
+            <a href="@item.Url">Link</a>
+        </div>
+    }
+</div>

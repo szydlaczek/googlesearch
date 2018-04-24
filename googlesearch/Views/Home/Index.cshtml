@@ -1,0 +1,12 @@
+﻿@model googlesearch.ViewModels.SearchQuery
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="margin-top:30px">
+    @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+    {
+        @Html.TextBoxFor(Model => Model.Query)
+        <button>Wyślij</button>
+    }
+</div>
